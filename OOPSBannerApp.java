@@ -1,22 +1,27 @@
+
 package STEPCLASS;
 
 /**
- * OOPSBannerApp UC3 – Render OOPS as Banner using String.join()
- * Optimized for alignment and readability.
+ * OOPSBannerApp UC4 – Rendering OOPS as a list
+        - using String.join() instead of +
  * @author Akshaya419
- * @version 3.1
+ * @version 4.0
  */
-public class OOPSBannerApp {
-    public static void main(String[] args) {
-        // We use a delimiter of "  " (two spaces) to separate the letters clearly.
-        String sep = "  ";
 
-        System.out.println(String.join(sep, "  *** ",  "  *** ",   " ***** ", "  **** "));
-        System.out.println(String.join(sep, " *   * ", " *   * ", " *    *", " * "));
-        System.out.println(String.join(sep, " *   * ", " *   * ", " *    *", " * "));
-        System.out.println(String.join(sep, " *   * ", " *   * ", " ***** ", "  *** "));
-        System.out.println(String.join(sep, " *   * ", " *   * ", " *     ", "     * "));
-        System.out.println(String.join(sep, " *   * ", " *   * ", " *     ", "     * "));
-        System.out.println(String.join(sep, "  *** ",  "  ***   ", " *     "," **** "));
+public class OOPSBannerApp {
+
+    public static void main(String[] args) {
+        String[] lines = new String[7] ;
+        lines[0] = String.join(" ","  **    " ,"   **  ","   *   *   ","    ***  ");
+        lines[1] = String.join(" "," *   *   " ,"*    * ","  *    *  ","  *    * ");
+        lines[2] = String.join(" ","*     *  " ,"*     *","  *   *  ","   **       ");
+        lines[3] = String.join(" ","*     *  " ,"*     *","  **   ","      **  ");
+        lines[4] = String.join(" ","*     *  " ,"*     *","  *       ","      * ");
+        lines[5] = String.join(" "," *   *   " ," *   * ","  *       ","  *     **");
+        lines[6] = String.join(" ","  **    " ,"    **  ","  *       ","    ***  ");
+        
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
